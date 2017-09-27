@@ -1,4 +1,4 @@
-FROM debian:9
+FROM debian:stretch-slim
 
 ENV JAVA_VERSION=9
 ENV JAVA_UPDATE=181
