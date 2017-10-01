@@ -13,6 +13,7 @@ RUN apt-get update && apt-get install -y wget ca-certificates unzip && \
     ln -s "java-${JAVA_VERSION}-oracle" "$JAVA_HOME" && \
     ln -s "$JAVA_HOME/bin/"* "/usr/bin/" && \
     rm "/tmp/jdk-${JAVA_VERSION}_linux-x64_bin.tar.gz" && \
+    rm -f "$JAVA_HOME/lib/src.zip" && \
     apt-get remove -y wget ca-certificates unzip
 
 WORKDIR /
