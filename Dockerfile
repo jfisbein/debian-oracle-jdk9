@@ -14,6 +14,8 @@ RUN apt-get update && apt-get install -y wget ca-certificates unzip && \
     ln -s "$JAVA_HOME/bin/"* "/usr/bin/" && \
     rm "/tmp/jdk-${JAVA_VERSION}_linux-x64_bin.tar.gz" && \
     rm -f "$JAVA_HOME/lib/src.zip" && \
+    rm -rf "$JAVA_HOME/lib/missioncontrol" && \
+    rm -rf "$JAVA_HOME/lib/desktop" && \
     apt-get remove -y wget ca-certificates unzip
 
 WORKDIR /
